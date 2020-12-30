@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" type="text/javascript"></script>
+    <style>
+        html {
+            background-color: indigo;
+        }
+    </style>
+    <title>Events</title>
+</head>
+<body>
+    <button id="add-new-row">Add New Row</button>
+    <div id="output">
+
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var count = 0;
+        $("#add-new-row").click(function() {
+            count++;
+            $("#output").append("<p>This is a new row: " + count + "</p>");
+        });
+    });
+</script>
