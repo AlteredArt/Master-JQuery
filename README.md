@@ -1,3 +1,2 @@
 # Master-JQuery
-add jquery master files here
-lets see if this works
+This is a jquery example sheet!
