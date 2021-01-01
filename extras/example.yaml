@@ -1,0 +1,49 @@
+#this is a comment
+#.yaml or .yml
+
+
+person:
+  #variable
+  name: "jared"
+  cats: !!str 2.2
+  occupation: "cool"
+  level: !!float 127
+  male: true
+  # ISO 8601    (standard time stamp)
+  birthday: 1994-02-06 14:33:22
+  flaws: null
+  hobbies:
+    -hiking
+    -painting
+    -cooking
+    -eating
+    -music
+    -art
+  colors: ["Red", "blue", "green", "yellow"]
+  friends:
+    -name: "Steph"
+    age: 22
+    - {name: "chloe", age: 6}
+    -
+      name: "Waffles"
+      age: 12
+  description: >
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+    when an unknown printer took a galley of type and scrambled it to make a type 
+    specimen book. It has survived not only five centuries, but also the leap into
+     electronic typesetting, remaining essentially unchanged. 
+    It was popularised in the 1960s with the release of 
+    Letraset sheets containing Lorem Ipsum passages, 
+    and more recently with desktop publishing 
+    software like Aldus PageMaker including versions of Lorem Ipsum. 
+  signature: |
+    Jared
+    Altered Art
+    email - waffles@gmail.com
+  id: *name
+  base: &base
+    var1: value1
+
+  foo:
+    <<: *base

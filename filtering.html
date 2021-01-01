@@ -6,7 +6,7 @@
     <style>
         body {
             background-color: indigo;
-            margin: 0px;
+            margin: 22px;
         }
 
         p {
@@ -23,16 +23,15 @@
 </head>
 <body>
     <p>Which Fruit do you like?</p>
-    
+
     <div class="selections">
-        <input type="checkbox"><span>Apples</span>
-        <input type="checkbox"><span>Bananas</span>
-        <input type="checkbox"><span>Oranges</span>
-        <input type="checkbox"><span>Pears</span>
-        <input type="checkbox"><span>Watermelon</span>
-        <input type="checkbox"><span>Grapes</span>
-        <input type="checkbox"><span>Peaches</span>
-        <!-- <input type="checkbox"><span></span> -->
+        <input type="checkbox"/><span>Apples</span>
+        <input type="checkbox"/><span>Bananas</span>
+        <input type="checkbox"/><span>Oranges</span>
+        <input type="checkbox"/><span>Pears</span>
+        <input type="checkbox"/><span>Watermelon</span>
+        <input type="checkbox"/><span>Grapes</span>
+        <input type="checkbox"/><span>Peaches</span>
     </div>
 
     <div id="output" class="linebreak-items"></div>
@@ -42,8 +41,7 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $("[type=checkbox]").change(function() {
-            $("#output").html("<p>You appear to like the following fruits: </p>").append($(":checked").next().clone());
-
+            $("#output").html("<p>You appear to like the following fruits:</p>").append($(":checked").next().clone());
         });
     });
 </script>
