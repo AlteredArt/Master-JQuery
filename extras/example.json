@@ -1,0 +1,20 @@
+{
+    "person": {
+        "name": "Waffles",
+        "age": 23,
+        "level": 101,
+        "male": true,
+        "flaws": null,
+        "hobbies": ["eating", "sleeping", "meowing"],
+        "friends": [
+            {
+                "name": "chole",
+                "age": 6
+            },
+            {
+                "name": "Jared",
+                "age": 31
+            },
+        ]
+    }
+}
