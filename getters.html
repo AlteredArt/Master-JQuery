@@ -3,12 +3,39 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-  body {
-    background-color: indigo;
-  }
-  </head>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+    <style>
+      body {
+        background-color: rgb(84, 138, 210);
+      }
+    </style>
+   </head>
+  
+ 
   <body>
+    <div id="input">
+      <ol>
+        <li id="test1"></li>
+        <li></li>
+        <li></li>
+        <li class="other"></li>
+        <li class="other" id="test5"></li>
+      </ol>
+    </div>
+
+    <p>Here is the HTML:</p>
+    <pre id="html-output"></pre>
+
+    <p>Here is the Text:</p>
+    <pre id="text-output"></pre>
+
 
   </body>
   </html>
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $("li").text("This is repeating text");
+  })
+  </script>
