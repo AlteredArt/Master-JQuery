@@ -7,3 +7,6 @@ save changes
 
 
 learn how to add in read me.
+
+Finish this off
+send the pictures over to work email to complete
