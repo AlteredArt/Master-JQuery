@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"> </script>
+    <style>
+        body {background-color: lightcoral;}
+    </style>
+    <title>Screen Recording</title>
+</head>
+<body>
+    <div class="cursor hidden"></div>
+    <div>
+        <button type="button" id="record">Record</button>
+        <button type="button" id="play">Play</button>
+    </div>
+    <div>
+        <img src="add pic here" alt="">
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+    var recording = {
+        data: [],
+        recordMove : function(pageX, pageY) {
+            recording.data.push({x : pageX, y : pageY});
+        },
+        currentMove: 0,
+        play : function() {
+            if (recording.currentMove < recording.data.length) {
+                var coordinates = recording.data[recording.currentMove];
+                $(".cursor").css({
+                    top : coordinates.y,
+                    left: coordinates.x
+                }).show();
+                recording.currentMove++;
+                setTimeout(recording.play, 10);
+            }
+        }
+    };
+
+    $(document).ready(function(){
+        $("#record").click(function(){
+            $(".cursor").hide();
+        })
+    })
+</script>
