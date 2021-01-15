@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+    <style>
+        body {
+            background-color: indigo;
+            margin: auto;
+            font-size: 6rem;
+        }
+
+        p {
+            color: white;
+            font-size: 20px;
+        }
+
+        span {
+            font-size: 50px;
+            color: white;
+        }
+        #img{
+            width: 50px;
+        }
+
+    </style>
+    <title>Filtering</title>
+</head>
+<body>
+    <p>Which Fruit do you like?</p>
+
+    <div>
+        <input type="checkbox"/><span>Apples</span>
+        <input type="checkbox"/><span>Bananas</span>
+        <input type="checkbox"/><span>Oranges</span>
+        <input type="checkbox"/><span>Pears</span>
+        <input type="checkbox"/><span>Watermelon</span>
+        <input type="checkbox"/><span>Grapes</span>
+        <input type="checkbox"/><span>Peaches</span>
+        <!-- <img src="https://cdn.mos.cms.futurecdn.net/42E9as7NaTaAi4A6JcuFwG-1200-80.jpg" alt="" id='img'> -->
+    </div>
+
+    <div id="output" class="linebreak-items"></div>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("[type=checkbox]").change(function() {
+            $("#output").html("<p>You appear to like the following fruits:</p>").append($(":checked").next().clone());
+        });
+    });
+</script>
