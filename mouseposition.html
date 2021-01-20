@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"> </script>
+    <style>
+        body {background-color: lightcoral;}
+    </style>
     <title>Mouse Position</title>
 </head>
 <body>
-    
+    <div id="output"></div>
+    <div id="canvas"></div>
 </body>
 </html>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        var startX = 0; var startY = 0; var endX = 0; var endY = 0;
+        $("#canvas").click(function(e) {
+            var x = e.pageX; var y = e.pageY;
+            $("#output").html("Left: " + x + "Top: " + y);
+            if ( (startX == 0) && (startY == 0) ) {
+                startX = x; startY = y;
+            } else {
+                
+            }
+        })
+    })
+
+
+</script>
