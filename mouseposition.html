@@ -24,7 +24,9 @@
             if ( (startX == 0) && (startY == 0) ) {
                 startX = x; startY = y;
             } else {
-                
+                endX = x; endY = y;
+                var xCoordinate = (startX < endX) ? startX : endX;
+                var yCoordinate = (startY < endY) ? startY : endY;
             }
         })
     })
