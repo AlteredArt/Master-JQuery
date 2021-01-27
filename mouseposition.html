@@ -29,6 +29,7 @@
                 var yCoordinate = (startY < endY) ? startY : endY;
                 var width = (startY < endX) ? (endX - startX) : (startX - endX);
                 var height = (startY < endY) ? (endY - startY) : (startY - endY);
+                var div = $ ("<div></div>").css("left", xCoordinate).css("top", yCoordinate)
             }
         })
     })
