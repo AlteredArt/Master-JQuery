@@ -31,6 +31,8 @@
                 var height = (startY < endY) ? (endY - startY) : (startY - endY);
                 var div = $ ("<div></div>").css("left", xCoordinate).css("top", yCoordinate)
                     .width(width).height(height)
+                    .css("position", "fixed").css("background-color", "#006").css("border", "1px solid #999");
+                    
             }
         })
     })
