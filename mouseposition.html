@@ -32,10 +32,11 @@
                 var div = $ ("<div></div>").css("left", xCoordinate).css("top", yCoordinate)
                     .width(width).height(height)
                     .css("position", "fixed").css("background-color", "#006").css("border", "1px solid #999");
-                    
+                $("#canvas").append(div);
+                startX = 0; startY = 0;
             }
-        })
-    })
+        });
+    });
 
 
 </script>
